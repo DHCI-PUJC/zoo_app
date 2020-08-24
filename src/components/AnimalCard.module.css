@@ -1,0 +1,14 @@
+.animal {
+  width: 100%;
+}
+
+.animal__image {
+  background-color: lightgray;
+  height: 120px;
+  width: 120px;
+}
+  
+.animal__container {
+  border: 1px solid lightgray;
+  padding: 10px;
+}
