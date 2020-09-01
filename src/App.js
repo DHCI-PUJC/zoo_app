@@ -2,20 +2,28 @@ import React, { Component } from 'react';
 import './App.css';
 
 import AnimalCard from './components/AnimalCard';
+import HeaderBar from './components/HeaderBar';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {
-          this.state.animals.map(animal => {
-            return <AnimalCard
-              key={animal.id}
-              name={animal.name}
-              description={animal.description}
-              img={animal.img} />
-          })
-        }
+        <HeaderBar />
+        <div className='container-fluid'>
+          <div className='row'>
+            {
+              this.state.animals.map(animal => {
+                return <div className='col-sm-4'>
+                  <AnimalCard
+                    key={animal.id}
+                    name={animal.name}
+                    description={animal.description}
+                    img={animal.img} />
+                </div>
+              })
+            }
+          </div>
+        </div>
       </div>
     );
   }
@@ -38,6 +46,11 @@ class App extends Component {
         id: 3,
         name: 'Tigre',
         description: 'Descripción del tigre',
+        img: ''
+      }, {
+        id: 4,
+        name: 'Cebra',
+        description: 'Descripción del Cebra',
         img: ''
       }]
     }

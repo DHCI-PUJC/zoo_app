@@ -1,14 +1,14 @@
-.animal {
+.cardContainer {
   width: 100%;
 }
 
-.animal__image {
+.animalImage {
   background-color: lightgray;
-  height: 120px;
-  width: 120px;
+  min-height: 200px;
+  min-width: 100%;
 }
   
-.animal__container {
+.animalContainer {
   border: 1px solid lightgray;
   padding: 10px;
 }
