@@ -8,9 +8,8 @@ class Animals extends Component {
       <div className='row'>
         {
           this.state.animals.map(animal => {
-            return <div className='col-sm-4'>
+            return <div className='col-sm-4' key={animal.id}>
               <AnimalCard
-                key={animal.id}
                 name={animal.name}
                 description={animal.description}
                 img={animal.img} />

@@ -23,10 +23,6 @@ class App extends Component {
         </div>
       </div>
     );
-  }
-
-  constructor(props) {
-    super(props);
   } 
 }
 

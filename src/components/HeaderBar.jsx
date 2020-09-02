@@ -7,16 +7,16 @@ class HeaderBar extends Component {
       <nav className='navbar navbar-expand-lg navbar-light bg-light fixed-top'>
         <div className='navbar-brand'>Zoo</div>
 
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <div class="nav-link">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <div className="nav-link">
               <Link to='/'>
                 Animales
               </Link>
             </div>
           </li>
-          <li class="nav-item">
-            <div class="nav-link">
+          <li className="nav-item">
+            <div className="nav-link">
               <Link to='/who'>
                 Quienes somos?
               </Link>
