@@ -10,9 +10,8 @@ class Animals extends Component {
           this.state.animals.map(animal => {
             return <div className='col-sm-4' key={animal.id}>
               <AnimalCard
-                name={animal.name}
-                description={animal.description}
-                img={animal.img} />
+                onAnimalsSelect={this.onAnimalsSelect} 
+                animal={animal} />
             </div>
           })
         }
@@ -46,6 +45,12 @@ class Animals extends Component {
         img: ''
       }]
     }
+
+    this.onAnimalsSelect = this.onAnimalsSelect.bind(this);
+  }
+
+  onAnimalsSelect(animal) {
+    this.props.onAppAnimalSelect(animal);
   }
 }
 
