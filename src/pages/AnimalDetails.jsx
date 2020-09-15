@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class AnimalDetails extends Component {
   render() {
@@ -15,4 +16,10 @@ class AnimalDetails extends Component {
   }
 }
 
-export default AnimalDetails;
+const mapStateToProps = (state) => {
+  return {
+    animal: state.animal.animal
+  };
+}
+
+export default connect(mapStateToProps)(AnimalDetails);

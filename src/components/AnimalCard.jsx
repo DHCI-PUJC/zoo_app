@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styles from'./AnimalCard.module.css';
 import  { Link } from 'react-router-dom';
+import { setAnimal } from '../actions/animal';
+import { connect } from 'react-redux';
 
 class AnimalCard extends Component {
   render() {
@@ -29,8 +31,15 @@ class AnimalCard extends Component {
   }
 
   onAnimalCardSelect() {
-    this.props.onAnimalsSelect(this.props.animal);
+    this.props.setAnimal(this.props.animal);
   }
 }
 
-export default AnimalCard;
+const mapStateToActions = {
+  setAnimal
+};
+
+export default connect(
+  null,
+  mapStateToActions
+)(AnimalCard);

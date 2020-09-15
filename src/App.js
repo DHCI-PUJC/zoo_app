@@ -15,10 +15,10 @@ class App extends Component {
         <div className='container-fluid'>
           <Switch>
             <Route path='/' exact>
-              <Animals onAppAnimalSelect={this.onAppAnimalSelect} />
+              <Animals />
             </Route>
             <Route path='/details'>
-              <AnimalDetails animal={this.state.animal} />
+              <AnimalDetails />
             </Route>
             <Route path='/who' exact>
               <Who />
@@ -27,19 +27,6 @@ class App extends Component {
         </div>
       </div>
     );
-  }
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      animal: {}
-    };
-
-    this.onAppAnimalSelect = this.onAppAnimalSelect.bind(this);
-  }
-
-  onAppAnimalSelect(animal) {
-    this.setState({ animal });
   }
 }
 
