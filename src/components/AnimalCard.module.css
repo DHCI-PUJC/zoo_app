@@ -12,3 +12,21 @@
   border: 1px solid lightgray;
   padding: 10px;
 }
+
+.name {
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: small;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1064px) {
+  .name {
+    color: red;
+  }
+}

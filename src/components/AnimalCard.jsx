@@ -13,7 +13,7 @@ class AnimalCard extends Component {
             src={this.props.animal.img} 
             className={styles.animalImage} 
             alt='imagen del animal' />
-          <h3>{ this.props.animal.name }</h3>
+          <div className={styles.name}>{ this.props.animal.name }</div>
           <p>{ this.props.animal.description }</p>
 
           <Link 
