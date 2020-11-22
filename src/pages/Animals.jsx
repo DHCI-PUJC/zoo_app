@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { getAnimals } from '../actions/animal';
 
 import AnimalCard from '../components/AnimalCard';
 
@@ -17,7 +18,15 @@ class Animals extends Component {
       </div>
     );
   }
+
+  componentDidMount() {
+    this.props.getAnimals();
+  }
 }
+
+const mapActionsToProps = {
+  getAnimals
+};
 
 const mapStoreToProps = (state) => {
   return {
@@ -25,4 +34,4 @@ const mapStoreToProps = (state) => {
   };
 }
 
-export default connect(mapStoreToProps)(Animals);
+export default connect(mapStoreToProps, mapActionsToProps)(Animals);

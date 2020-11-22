@@ -1,21 +1,6 @@
 let initialState = {
   animal: {},
-  animals: [{
-    id: 1,
-    name: 'León',
-    description: 'Descripción del león',
-    img: ''
-  }, {
-    id: 2,
-    name: 'Zorro',
-    description: 'Descripción del zorro',
-    img: ''
-  }, {
-    id: 3,
-    name: 'Tigre',
-    description: 'Descripción del tigre',
-    img: ''
-  }]
+  animals: []
 };
 
 const animalReducer = (state = initialState, action) => {
@@ -25,6 +10,12 @@ const animalReducer = (state = initialState, action) => {
       return {
         ...state,
         animal: action.payload.animal
+      };
+
+    case 'SET_ANIMALS':
+      return {
+        ...state,
+        animals: action.payload.animals
       };
     
     default:
